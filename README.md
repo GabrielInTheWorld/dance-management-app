@@ -13,6 +13,12 @@ Create a server by using TypeScript, which communicates with clients by using th
 3. The server has to be able to send data to clients by using the websocket-protocol.
 4. Data sent from a client have to be persisted.
 
+Every user has the following information:
+- Title
+- First name
+- Last name
+- Joined at (stored as a unix timestamp in seconds)
+
 ## Exercise 2
 
 Create a client, which will communicate with the server, by using the Angular CLI.
@@ -22,6 +28,11 @@ Create a client, which will communicate with the server, by using the Angular CL
 3. Create a view, which shows information about a user (detailview).
 4. Create a view, which shows every user in a list. Clicking on one row should navigate to the detailview of the clicked user.
 5. Furthermore, the list of users has to be reachable from the entrypoint and the client has to get updates from the server by using the websocket-protocol and shows them in realtime.
+
+Hints for creating and displaying a user:
+- A user's title should be a drop-down menu containing the entries `null`, "Dr.", "Prof." (in the create view)
+- A user's "joined at" timestamp should be displayed in a human readable format (in the detail view)
+- When creating a user, the field "first name" should be automatically focussed.
 
 ## Hints
 
