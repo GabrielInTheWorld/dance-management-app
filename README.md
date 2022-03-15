@@ -36,5 +36,7 @@ Hints for creating and displaying a user:
 
 ## Hints
 
-To fulfill the exercise only the use of TypeScript and Angular are requirements. Every other technology, library or tool can be chosen freely.
-Code has to be written following the principles of "Clean Code" and SOLID (for further information see [Coding Guidelines](https://github.com/OpenSlides/OpenSlides/wiki/Coding-Guidelines)). For the server is any kind of data management required. If this is a real database or just an object stored in-memory can be chosen freely.
+- To fulfill the exercise only the use of TypeScript and Angular are requirements. Every other technology, library or tool can be chosen freely.
+- Code has to be written following the principles of "Clean Code" and SOLID (for further information see [Coding Guidelines](https://github.com/OpenSlides/OpenSlides/wiki/Coding-Guidelines)). 
+- Tips and tricks related to Angular can be found here: [Angular: Tutorial](https://angular.io/tutorial) and [Angular: Product-list](https://angular.io/start)
+- For the server is any kind of data management required. If this is a real database or just an object stored in-memory can be chosen freely.
