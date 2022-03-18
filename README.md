@@ -8,8 +8,8 @@ By using a user management app, users in the dance club "broken leg" will be sto
 
 Create a server by using TypeScript, which communicates with clients by using the websocket-protocol.
   
-1. There have to be a route, a client can connect to the server by using the websocket-protocol.
-2. There have to be a route, a client can send data to the server (using "POST", "PUT" as well as "DELETE").
+1. There have to be a route, through which a client can connect to the server by using the websocket-protocol.
+2. There have to be a route, through which a client can send data to the server (using "POST", "PUT" as well as "DELETE").
 3. The server has to be able to send data to clients by using the websocket-protocol.
 4. Data sent from a client have to be persisted.
 
