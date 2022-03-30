@@ -1,0 +1,8 @@
+# ignore the savefile
+userdata.txt
+
+# ignore ALL files in ANY directory named as below
+node_modules/ 
+dist/server/
+.vscode/
+client/.angular/cache/
