@@ -1,0 +1,17 @@
+<h2>List of Users<a routerLink="/edit"><button type="button" class="smolButton">Edit Users</button></a></h2>
+<ul class="userlist">
+  <div class="listelement">
+    <li *ngFor="let user of users | async | keyvalue">
+      <a routerLink="/detail/{{user.key}}" style="text-decoration: none">
+        <span class="name"><button type="button" class="listelement">{{user.value.title}} {{user.value.firstName}}
+            {{user.value.lastName}}</button></span>
+      </a>
+    </li>
+  </div>
+</ul>
+
+<!--
+  <button type="button" (click)="goToDetail({{user.key}})">
+    <span class="name">{{user.value.title}} {{user.value.firstName}} {{user.value.lastName}}</span>
+  </button>
+-->

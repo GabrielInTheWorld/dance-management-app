@@ -1,0 +1,76 @@
+
+
+/* UserlistComponent's private SCSS styles */
+.userlist {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .userlist li {
+    display: flex;
+  }
+  
+  .userlist button {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: var(--userlist-btn-col);
+    color: var(--userlist-btn-txt-col);
+    margin: auto;
+    padding: 0;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+    border-radius: 0px;
+    display: flex;
+    align-items: stretch;
+    height: 1.8em;
+  }
+  
+  .userlist button:hover {
+    color: var(--userlist-btn-hover-txt-col);
+    background-color: var(--userlist-btn-hover-col);
+    left: 0em;
+  }
+  
+  .userlist button:active {
+    background-color: var(--userlist-btn-active-col);
+    color: var(--userlist-btn-active-txt-col);
+  }
+  
+  .userlist button.selected {
+    background-color: var(--userlist-btn-select-col);
+    color: var(--userlist-btn-select-txt-col);
+  }
+  
+  .userlist button.selected:hover {
+    background-color: var(--userlist-btn-select-hover-col);
+    color: var(--userlist-btn-select-hover-txt-col);
+  }
+  
+  .userlist button.selected:active {
+    background-color: var(--userlist-btn-select-active-col);
+    color: var(--userlist-btn-select-active-txt-col);
+  }
+  
+  .userlist .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #405061;
+    line-height: 1em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .userlist .name {
+    align-self: center;
+  }
+
+  .listelement{
+    //overflow: auto;
+    width: 15cm;
+    border: var(--userlist-border-accent);
+  }

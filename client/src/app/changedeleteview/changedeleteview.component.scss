@@ -1,0 +1,17 @@
+.editlist {
+  margin: 0 0 1em 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.editlist li {
+  display: flex;
+}
+
+.deleteUser{
+  background-color: var(--delete-col);
+}
+
+.deleteUser, .changeUser{
+  width: 5em;
+}

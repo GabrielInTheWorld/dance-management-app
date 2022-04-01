@@ -1,0 +1,17 @@
+<h3>List of Users:</h3>
+
+<ul class="editlist">
+    <!--<li *ngFor="let user of (users | async) | keyvalue" class="editlist">-->
+    <li *ngFor="let user of users | async | keyvalue" class="editlist">
+        <select [(ngModel)]='user.value.title' id="title{{user.key}}">
+            <!--<option *ngFor="let title of titles" [ngValue]="title">{{user.value.title}}</option>-->
+            <option *ngFor="let title of titles" [ngValue]="title">{{title}}</option>
+        </select>
+        <input id="firstName{{user.key}}" [(ngModel)]="user.value.firstName" type="text">
+        <input id="firstName{{user.key}}" [(ngModel)]="user.value.lastName" type="text">
+
+        <button id="change{{user.key}}" type="submit" class="smolButton changeUser" (click)="submitChange(user.key)">->
+            Change</button>
+        <button type="delete{{user.key}}" class="smolButton deleteUser" (click)="submitDelete(user.key)">- Delete</button>
+    </li>
+</ul>

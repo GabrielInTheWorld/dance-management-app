@@ -1,0 +1,15 @@
+<h3>New User:</h3>
+<form [formGroup]="addForm" (ngSubmit)="submitAdd()">
+
+    <p>
+        <select formControlName="title">
+            <option value="" disabled selected hidden>Title...</option>
+            <option *ngFor="let title of titles" [ngValue]="title">{{title}}</option>
+        </select>
+        <input id="firstName" formControlName="firstName" type="text" placeholder="First Name..." autofocus>
+        <input id="lastName" formControlName="lastName" type="text" placeholder="Last Name...">
+
+        <button type="submit" class="smolButton addUser" [disabled]="addForm.value.title==='' || addForm.value.firstName==='' || addForm.value.lastName===''">+ Add User</button>
+    </p>
+
+</form>

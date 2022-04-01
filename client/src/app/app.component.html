@@ -1,3 +1,21 @@
-<h1>{{title}}</h1>
+<h1><i>{{title}}</i></h1>
 
-<router-outlet></router-outlet>
+<hr>
+<hr>
+
+<div class="grid-container">
+    <div class="grid-child">
+        <nav>
+            <a routerLink="/dashboard"><button type="button" class="sidebar">Dashboard</button></a> <br>
+            <a routerLink="/userlist"><button type="button" class="sidebar">List of Users</button></a>
+            <app-messages></app-messages>
+        </nav>
+    </div>
+    <div class="grid-child">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+
