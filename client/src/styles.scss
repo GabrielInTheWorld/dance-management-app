@@ -1,0 +1,125 @@
+:root {
+  --standard-backgrnd-col: #48404a;
+  --standard-txt-col: white;
+  --hr-col: #cc00ff;
+  --header1-col: lime; //#369;
+  --other-header-col: var(--header1-col); //#444;
+  --body-txt-col: var(--standard-txt-col);
+  --input-txt-col: black;
+  --input-col: white;
+  --input-border: 0.05em solid var(--hr-col);
+  --delete-col: #ee5555;
+  --btn-col: #884099;
+  --btn-txt-col: white;
+  --btn-hover-col: white;
+  --btn-hover-txt-col: black;
+  --btn-disabled-col: #eee;
+  --btn-disabled-txt-col: #aaa;
+  --userlist-border-accent: 1px solid var(--hr-col);
+  --userlist-btn-col: var(--standard-backgrnd-col);
+  --userlist-btn-txt-col: var(--standard-txt-col);
+  --userlist-btn-hover-txt-col: #2c3a41;
+  --userlist-btn-hover-col: #e6e6e6;
+  --userlist-btn-active-txt-col: #fafafa;
+  --userlist-btn-active-col: #525252;
+  --userlist-btn-select-col: black;
+  --userlist-btn-select-txt-col: white;
+  --userlist-btn-select-hover-col: #505050;
+  --userlist-btn-select-hover-txt-col: white;
+  --userlist-btn-select-active-col: black;
+  --userlist-btn-select-active-txt-col: white;
+
+  --smolbtn-padding-left: 0.5em;
+}
+
+/* Application-wide Styles */
+html {
+  background-color: var(--standard-backgrnd-col);
+  color: var(--standard-txt-col);
+}
+
+hr {
+  border: 1px solid var(--hr-col);
+}
+
+h1 {
+    color: var(--header1-col);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+  }
+  h2, h3 {
+    color: var(--other-header-col);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 2em;
+  }
+  body, button {
+    color: var(--body-txt-col);
+    font-family: Cambria, Georgia, serif;
+  }
+  button {
+    background-color: var(--btn-col);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--btn-txt-col);
+    font-size: 1.2rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  button:hover {
+    background-color: var(--btn-hover-col);
+    color: var(--btn-hover-txt-col);
+  }
+  button:disabled {
+    background-color: var(--btn-disabled-col);
+    color: var(--btn-disabled-txt-col);
+    cursor: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    grid-gap: 20px;
+  }
+
+  .grid-child {
+    overflow: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .clear {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .smolButton{
+    margin: 0 0 0 var(--smolbtn-padding-left);
+    padding: 0.1em;
+  }
+
+  input[type="text"], select{
+    color: var(--input-txt-col);
+    background-color: var(--input-col);
+    margin: 0;
+    padding: 0.05em;
+    font-family: Cambria, Georgia, serif;
+    font-size: 1.2rem;
+    border: var(--input-border);
+  }
+
+  select{
+    width: 4em;
+  }
+
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }

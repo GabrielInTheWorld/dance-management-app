@@ -67,12 +67,12 @@ export class UserController {
             this.broadcastData();
 
             //send a response
-            response.send('this was a post');
+            response.send(JSON.stringify('this was a post'));
         }
         catch (err) {
             //if the data does not have the correct form
             console.log('Server: Wrong input: ERROR msg: %s', err);
-            response.send('Warning: This was a wrong input for adding a user');
+            response.send(JSON.stringify('Warning: This was a wrong input for adding a user'));
         }
     }
 
@@ -91,12 +91,12 @@ export class UserController {
             this.broadcastData();
 
             //send a response
-            response.send('this was a put');
+            response.send(JSON.stringify('this was a put'));
         }
         catch (err) {
             //if the data does not have the correct form
             console.log('Server: Wrong input: ERROR msg: %s', err);
-            response.send('Warning: This was a wrong input for changing user data');
+            response.send(JSON.stringify('Warning: This was a wrong input for changing user data'));
         }
     }
 
@@ -116,12 +116,12 @@ export class UserController {
             this.broadcastData();
 
             //send a response
-            response.send('this was a delete');
+            response.send(JSON.stringify('this was a delete'));
         }
         catch (err) {
             //if the data does not have the correct form
             console.log('Server: Wrong input: ERROR msg: %s', err);
-            response.send('Warning: This was a wrong input for deleting a user');
+            response.send(JSON.stringify('Warning: This was a wrong input for deleting a user'));
         }
     }
 

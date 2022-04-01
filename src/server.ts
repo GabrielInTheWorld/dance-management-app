@@ -2,6 +2,7 @@
 import express from 'express';
 import {createServer} from 'http';
 import {Server} from 'ws';
+import cors from 'cors'
 
 import {UserController} from './controller';
 
@@ -12,14 +13,23 @@ const app = express();
 const server = createServer(app);
 
 //initialize the WebSocket server instance
+const WebSocket = require('ws');
 const wss = new Server({ server });
 
+app.use(cors())
 
 //incoming data is being parsed to a json object
 app.use(express.json());
 
 //to better decode routes
 app.use(express.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+    console.log('Incoming request from:', `${req.protocol}://${req.get('host')}${req.originalUrl}`)
+    res.setHeader('Content-Type', 'application/json')
+    // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200')
+    next()
+})
 
 //evtl später
 //app.use(cookieParser());
@@ -33,36 +43,36 @@ const controller = new UserController(app, (dataToBroadcast: string) => {
     });
 })
 
-// //Websocket
-// wss.on('connection', (ws: WebSocket) => {
+//Websocket
+wss.on('connection', (ws: WebSocket) => {
 
-//     //connection is up, let's add a simple event
-//     //ws.on('message', (message: string) => {
+    //connection is up, let's add a simple event
+    //ws.on('message', (message: string) => {
 
-//     //log the received message and send it back to the client
-//     //    console.log('webSocketServer: Received: %s', message);
-//     //ws.send('Hello, you sent -> ${message}');
-//     //});
+    //log the received message and send it back to the client
+    //    console.log('webSocketServer: Received: %s', message);
+    //ws.send('Hello, you sent -> ${message}');
+    //});
 
-//     //Console-notification upon new connection
-//     ws.on('open', () => {
+    //Console-notification upon new connection
+    // ws.on('open', () => {
 
-//         //log the received message and send it back to the client
-//         console.log('WebSocketServer: New connection');
-//         //ws.send('Hello.');
-//     });
+    //     //log the received message and send it back to the client
+    //     console.log('WebSocketServer: New connection');
+    //     //ws.send('Hello.');
+    // });
 
-//     //Console-notification upon closed connection
-//     ws.on('close', () => {
+    // //Console-notification upon closed connection
+    // ws.on('close', () => {
 
-//         //log the received message and send it back to the client
-//         console.log('WebSocketServer: Closed connection');
-//     });
+    //     //log the received message and send it back to the client
+    //     console.log('WebSocketServer: Closed connection');
+    // });
 
-//     //send immediatly a feedback to the incoming connection 
-//     console.log('WebSocketServer: New connection');
-//     ws.send('Hi there, I am a WebSocket server');
-// });
+    //send immediatly a feedback to the incoming connection 
+    console.log('WebSocketServer: New connection');
+    //ws.send('Hi there, I am a WebSocket server');
+});
 
 //start our server
 server.listen(process.env.PORT || 8999, () => {
